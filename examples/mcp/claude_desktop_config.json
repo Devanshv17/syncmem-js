@@ -1,0 +1,13 @@
+{
+  "mcpServers": {
+    "syncmem": {
+      "command": "npx",
+      "args": ["-y", "@syncmem/mcp"],
+      "env": {
+        "SYNCMEM_API_KEY": "sm_live_YOUR_KEY_HERE",
+        "LLM_PROVIDER": "openai",
+        "LLM_API_KEY": "sk-YOUR_OPENAI_KEY_HERE"
+      }
+    }
+  }
+}

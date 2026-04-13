@@ -1,0 +1,39 @@
+{
+  "name": "@syncmem/sdk",
+  "version": "0.1.1",
+  "description": "The universal memory layer for AI agents — TypeScript/JavaScript SDK",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": ["ai", "memory", "agent", "llm", "context", "mcp", "syncmem", "openai", "claude", "gemini"],
+  "author": "SyncMem <hello@syncmem.com>",
+  "license": "MIT",
+  "homepage": "https://syncmem.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devanshv17/syncmem-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devanshv17/syncmem-js/issues"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
